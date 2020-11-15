@@ -92,7 +92,7 @@ public class HBaseCacheStoreTest {
 
   private static Connection getHBaseConnection() throws ServiceException, IOException {
     Configuration conf = utility.getConfiguration();
-    HBaseAdmin.checkHBaseAvailable(conf);
+    HBaseAdmin.available(conf);
     return ConnectionFactory.createConnection(conf);
   }
 

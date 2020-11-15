@@ -29,11 +29,11 @@ public final class HBaseUtil {
    * @throws IOException if an error occurs connecting to HBase
    */
   public static Connection createConnection(Configuration config) throws IOException {
-    try {
-      HBaseAdmin.checkHBaseAvailable(config);
-    } catch (ServiceException e) {
-      throw new IOException("No HBase connection", e);
-    }
+//    try {
+//      HBaseAdmin.available(config);
+//    } catch (Exception e) {
+//      throw new IOException("No HBase connection", e);
+//    }
     Connection conn = ConnectionFactory.createConnection(config);
     log.info("Created HBase connection");
     return conn;
